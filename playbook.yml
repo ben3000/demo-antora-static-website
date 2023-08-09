@@ -1,10 +1,9 @@
 site:
   title: Antora Demo Site
   url: https://my-antora-demo-site.org
-  start_page: index.adoc
 content:
   sources:
-  - url: https://github.com/ben3000/demo-antor-static-website.git
+  - url: https://github.com/ben3000/demo-antora-static-website.git
     branches: HEAD
 ui:
   bundle:

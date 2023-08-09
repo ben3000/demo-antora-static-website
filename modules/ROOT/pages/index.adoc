@@ -1,0 +1,4 @@
+= Static Site Content in Antora
+
+This is a static website built with https://antora.org[Antora].
+

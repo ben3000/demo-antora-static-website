@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: '16'
     - name: Install Antora
-      run: npm -i antora @antora/lunr-extension @antora/pdf-extension
+      run: npm i antora @antora/lunr-extension @antora/pdf-extension
     - name: Generate Site
       run: npx antora playbook.yml
     - name: Publish to DigitalOcean

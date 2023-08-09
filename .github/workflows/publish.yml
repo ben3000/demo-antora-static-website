@@ -1,0 +1,26 @@
+name: Generate Static Site with Antora
+run-name: Run Antora Generate by @${{ github.actor }}
+on:
+  push:
+    branches:
+    - main
+jobs:
+  generate-static-site:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - name: Install Antora
+      run: npm -i antora @antora/lunr-extension @antora/pdf-extension
+    - name: Generate Site
+      run: npx antora playbook.yml
+    - name: Publish to DigitalOcean
+      uses: digitalocean/app_action@v1.1.5
+      with:
+        app_name: my_DO_app
+        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+    

@@ -21,6 +21,6 @@ jobs:
     - name: Publish to DigitalOcean
       uses: digitalocean/app_action@v1.1.5
       with:
-        app_name: my_DO_app
+        app_name: orca-app
         token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
     

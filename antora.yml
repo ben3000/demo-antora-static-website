@@ -1,5 +1,5 @@
 name: demo-antora
-version: '0.0.1-SNAPSHOT'
+version: ~
 title: Demo Antora
 nav:
 - modules/ROOT/nav.adoc

@@ -1,5 +1,5 @@
-name: Generate Static Site with Antora
-run-name: Run Antora Generate by @${{ github.actor }}
+name: Generate Antora Static Site and Publish to Azure
+run-name: Run Antora Generate to Azure by @${{ github.actor }}
 
 on:
   push:
@@ -35,5 +35,6 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
+          app_build_command: "npx antora generate playbook.yml"
           output_location: "/build/site" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######

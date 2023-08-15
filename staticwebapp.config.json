@@ -1,9 +1,0 @@
-{
-  "trailingSlash": "auto",
-  "routes": [
-    {
-      "route": "/",
-      "rewrite": "/demo-antora/0.0.1-SNAPSHOT/index.html"
-    }
-  ]
-}

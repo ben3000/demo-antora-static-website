@@ -3,3 +3,12 @@
 This is a static website built with https://antora.org[Antora].
 
 An equivalent plain static website built without Antora is available at https://jellyfish-app-8gd8b.ondigitalocean.app/.
+
+.Some Python code
+[source,python]
+----
+def read_yaml(file_path):
+    with open(file_path, "r") as f:
+        return yaml.safe_load(f)
+
+----

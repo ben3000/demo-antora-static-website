@@ -12,3 +12,13 @@ def read_yaml(file_path):
         return yaml.safe_load(f)
 
 ----
+
+.Some React code
+[source,javascript]
+----
+export default function Page() {
+  return (
+    <p>This is a page.</p>
+  );
+}
+----

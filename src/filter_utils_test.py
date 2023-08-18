@@ -8,7 +8,7 @@ class FilterUtilsTest(unittest.TestCase):
         self.assertIsNone(strip_to_none(" "))
 
     def test_strip_to_none_02(self):
-        self.assertIsNone(strip_to_none(" blah "))
+        self.assertEqual(strip_to_none(" blah "), "blah")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,26 @@
+# CI/CD workflow
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build_test_run_ci:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: true
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        check-latest: true
+    - name: Run Unit tests
+      run: python -m unittest discover -s ./src --pattern "*_test.py"
+    - name: Run the migration
+      run: python src/main.py
